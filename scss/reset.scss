@@ -1,0 +1,32 @@
+/* /////////////////////////////////////////////////////////////////////////////
+
+  THIS FILE IS USED TO RESET DEFAULT CSS FORMATTING TO HOW WE WILL USE IT
+
+///////////////////////////////////////////////////////////////////////////// */
+
+html, body, ul, ol, li, form, fieldset, legend {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    // font-size: 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Montserrat', sans-serif;
+font-weight: 900;
+}
+
+/* colored divs for testing */
+.green { background-color: green; }
+.blue { background-color: blue; }
+.red { background-color: red; }
+.yellow { background-color: yellow; }
+.purple { background-color: purple; }
+.brown { background-color: brown; }
+.gray { background-color: gray; }
+.maroon { background-color: maroon; }
+.orange { background-color: #bf5700; }

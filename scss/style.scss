@@ -1,0 +1,29 @@
+
+/* /////////////////////////////////////////////////////////////////////////////\
+
+ * THIS FILE IS USED FOR GENERAL STYLING AND NOTES
+
+ * NOTES
+   * create a jquery file and attach it to the html file
+   * first jquery funciton is to call it whenever you want to change size
+       of text until it fills the div or window it is in.
+   * rethink the nested for/mixin after creating a fill jquery function.
+     * maybe only use it for changing the size of the divs/windows
+   * make the code modular AF
+     * things are hardcoded in like max height and max widths
+     * call mixins for certain numbers that might be used everywhere
+       * for example the hero bootstrap uses 4 & 6 size column;
+         this is hardcoded in the style.div.scss; call this function when
+         want to access those values so we do not have to change it in multiple
+         spaces
+
+///////////////////////////////////////////////////////////////////////////// */
+
+@import "reset.scss";
+@import "style-div.scss";
+@import "style-landscape.scss";
+@import "style-portrait.scss";
+
+.container-fluid {
+  max-width: 1500px;
+}

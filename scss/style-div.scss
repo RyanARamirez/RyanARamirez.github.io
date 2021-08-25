@@ -1,0 +1,47 @@
+
+/* /////////////////////////////////////////////////////////////////////////////
+
+  PROVIDING GENERAL STYLING FOR DIVS - NOT INTENDED FOR DYNAMIC STYLING
+
+///////////////////////////////////////////////////////////////////////////// */
+
+// CONSTANTS
+$DARKER_BLUE : #1EB2A6;
+$LIGHTER_BLUE : #D4F8E8;
+$ORANGE : #FFA34D;
+$PINK : #F67575;
+
+$MIN_BODY_WIDTH : 150px;
+$MAX_HERO_HEIGHT : 1400px;
+
+body {
+  min-width: $MIN_BODY_WIDTH;
+  // @media (max-width: $MIN_BODY_WIDTH) {
+  //   .hero {
+  //     background-color: $ORANGE;
+  //   }
+  // }
+
+  .hero {
+
+    background-color: $DARKER_BLUE;
+    color: $LIGHTER_BLUE;
+
+    .hero-row {
+      @media (max-height: $MAX_HERO_HEIGHT) { height: 100vh; }
+      @media (min-height: $MAX_HERO_HEIGHT + 1px) { height: $MAX_HERO_HEIGHT; }
+      font-size: 100%;
+
+      .headshot {
+        padding: 0;
+      }
+
+      .intro-div {
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+
+/* /////////////////////////////////////////////////////////////////////////////\
+
+ * THIS FILE IS USED TO MAKE STYLE CHANGES FOR SQUARE & LANDSCAPE SCREENS
+
+///////////////////////////////////////////////////////////////////////////// */
+
+@media screen and (orientation: not(portrait)) {
+  .headshot {
+    width: (4/12*100vw);
+  }
+  .intro-div {
+    height: (4/12*100vw);
+    padding: 0;
+    margin: 0;
+  }
+}

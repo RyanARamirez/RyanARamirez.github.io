@@ -1,27 +1,156 @@
+/* /////////////////////////////////////////////////////////////////////////////\
+
+ * THIS FILE IS USED FOR GENERAL STYLING AND NOTES
+
+ * NOTES
+   * create a jquery file and attach it to the html file
+   * first jquery funciton is to call it whenever you want to change size
+       of text until it fills the div or window it is in.
+   * rethink the nested for/mixin after creating a fill jquery function.
+     * maybe only use it for changing the size of the divs/windows
+   * make the code modular AF
+     * things are hardcoded in like max height and max widths
+     * call mixins for certain numbers that might be used everywhere
+       * for example the hero bootstrap uses 4 & 6 size column;
+         this is hardcoded in the style.div.scss; call this function when
+         want to access those values so we do not have to change it in multiple
+         spaces
+
+///////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////
+
+  THIS FILE IS USED TO RESET DEFAULT CSS FORMATTING TO HOW WE WILL USE IT
+
+///////////////////////////////////////////////////////////////////////////// */
+html, body, ul, ol, li, form, fieldset, legend {
+  margin: 0;
+  padding: 0; }
+
 body {
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 300;
-    font-size: 1.5rem;
-}
-   
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300; }
+
 h1, h2, h3, h4, h5, h6 {
-font-family: 'Montserrat', sans-serif;
-font-weight: 900;
-}
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900; }
 
-a { text-decoration: none; }
+/* colored divs for testing */
+.green {
+  background-color: green; }
 
-#page-header { background-color: #1eb2a6; height: 100vh;}
+.blue {
+  background-color: blue; }
 
-#page-header .headshot {
-    border-radius: 50%;
-    width: 25vw;
-    height: 25vw;
-    background-image: url(./assets/RyanHeadshot.JPG);
-    background-size: cover;
-    background-position-y: -25px;
-}
+.red {
+  background-color: red; }
 
-#page-header h1 {color: #d4f8e8;}
+.yellow {
+  background-color: yellow; }
 
-#page-header p {color: #d4f8e8;}
+.purple {
+  background-color: purple; }
+
+.brown {
+  background-color: brown; }
+
+.gray {
+  background-color: gray; }
+
+.maroon {
+  background-color: maroon; }
+
+.orange {
+  background-color: #bf5700; }
+
+/* /////////////////////////////////////////////////////////////////////////////
+
+  PROVIDING GENERAL STYLING FOR DIVS - NOT INTENDED FOR DYNAMIC STYLING
+
+///////////////////////////////////////////////////////////////////////////// */
+body {
+  min-width: 150px; }
+  body .hero {
+    background-color: #1EB2A6;
+    color: #D4F8E8; }
+    body .hero .hero-row {
+      font-size: 100%; }
+      @media (max-height: 1400px) {
+        body .hero .hero-row {
+          height: 100vh; } }
+      @media (min-height: 1401px) {
+        body .hero .hero-row {
+          height: 1400px; } }
+      body .hero .hero-row .headshot {
+        padding: 0; }
+      body .hero .hero-row .intro-div p {
+        margin-bottom: 0; }
+
+/* /////////////////////////////////////////////////////////////////////////////\
+
+ * THIS FILE IS USED TO MAKE STYLE CHANGES FOR SQUARE & LANDSCAPE SCREENS
+
+///////////////////////////////////////////////////////////////////////////// */
+@media screen and (orientation: false) {
+  .headshot {
+    width: 33.3333333333vw; }
+
+  .intro-div {
+    height: 33.3333333333vw;
+    padding: 0;
+    margin: 0; } }
+/* /////////////////////////////////////////////////////////////////////////////\
+
+ * THIS FILE IS USED TO MAKE STYLE CHANGES FOR PORTRAIT SCREENS
+
+///////////////////////////////////////////////////////////////////////////// */
+@media screen and (orientation: portrait) and (max-width: 1500px) {
+  .col-1 {
+    width: 100%; }
+
+  .col-2 {
+    width: 100%; }
+
+  .col-3 {
+    width: 100%; }
+
+  .col-4 {
+    width: 100%; }
+
+  .col-5 {
+    width: 100%; }
+
+  .col-6 {
+    width: 100%; }
+
+  .col-7 {
+    width: 100%; }
+
+  .col-8 {
+    width: 100%; }
+
+  .col-9 {
+    width: 100%; }
+
+  .col-10 {
+    width: 100%; }
+
+  .col-11 {
+    width: 100%; }
+
+  .col-12 {
+    width: 100%; }
+
+  .headshot {
+    width: 66.6666666667vw; }
+
+  .intro-div {
+    height: 50vh;
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 8vw;
+    padding-right: 8vw; } }
+.container-fluid {
+  max-width: 1500px; }
+
+/*# sourceMappingURL=style.css.map */
